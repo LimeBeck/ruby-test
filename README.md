@@ -1,24 +1,19 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Разработка
 
-Things you may want to cover:
+Для локальной разработки - запустите тестовое окружение:
+```bash
+cd docker/test_env
+docker-compose up
+```
 
-* Ruby version
+Установите зависимости:
+```bash
+bundler install
+```
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Для запуска сервера:
+```bash
+rails server
+```

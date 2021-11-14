@@ -19,6 +19,10 @@ development:
 
 test:
   <<: *default
+  database: blog_app_test
+  username: blog_app_test
+  password: test
+  url: postgresql://localhost:25432
 
 production:
   <<: *default

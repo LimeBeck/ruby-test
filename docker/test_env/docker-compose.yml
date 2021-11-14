@@ -11,6 +11,18 @@ services:
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
       - postgres_data:/var/lib/postgresql/data
+  
+  test_db:
+    image: postgres:14.1
+    ports:
+      - 25432:5432
+    environment:
+      - POSTGRES_USER=blog_app_test
+      - POSTGRES_PASSWORD=test
+      - POSTGRES_DB=blog_app_test
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    tmpfs:
+      - /var/lib/postgresql/data
 
 volumes:
   postgres_data:
