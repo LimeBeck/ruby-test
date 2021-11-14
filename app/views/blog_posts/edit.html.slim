@@ -1,0 +1,8 @@
+h1 #{ t 'page_titles.edit', model: BlogPost.model_name.human }
+
+div[class='mb-3']
+    == render 'form'
+
+=> link_to "#{t 'actions.show'}", @blog_post
+'|
+=< link_to "#{t 'actions.back'}", blog_posts_path

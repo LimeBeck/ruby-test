@@ -1,0 +1,61 @@
+ru:
+  send_digest_modes:
+    WEEKLY: "Еженедельно"
+    DAILY: "Ежедневно"
+    NONE: "Не рассылать"
+  page_titles:
+    edit: "Редактировать %{model}"
+  fields:
+    post:
+      title: "Заголовок"
+      content: "Содержимое"
+      edit_counts: "Количество редактирований"
+
+  actions:
+    show: "Просмотр"
+    edit: "Ред."
+    delete: "Удалить"
+    back: "Назад"
+    create_new: "Создать новую запись"
+    sign_out: "Выйти"
+  site_title: Наш блог
+  posts_list_page_title: "Список постов"
+  my_profile_page_title: "Мой профиль"
+
+  helpers:
+    label:
+      blog_post:
+        title: "Заголовок"
+        content: "Содержимое"
+        edit_сount: "Количество редактирований"
+    submit:
+      create: "Создать %{model}"
+      update: "Сохранить %{model}"
+
+  activerecord:
+    models:
+      blog_post:
+        one: "Запись в блоге"
+        other: "Записи в блоге"
+    attributes:
+      user:
+        name: "Имя"
+        send_digest_mode: "Режим отправки дайджеста"
+      blog_post:
+        title: "Заголовок"
+        content: "Содержимое"
+        edit_сount: "Количество редактирований"
+    errors:
+      messages:
+        record_invalid: 
+          one: 'При сохранении возникла ошибка'
+          other: 'При сохранении возникло %{count} ошибок'
+      models:
+        blog_post:
+          format: "%{message}"
+          attributes:
+            edit_count:
+              less_than: "Число редакций не может быть больше %{count}"
+  errors:
+    blog_post:
+      format: "%{attribute} %{message}"

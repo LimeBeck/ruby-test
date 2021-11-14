@@ -1,0 +1,28 @@
+h1 = t 'posts_list_page_title'
+
+table[class='table']
+  thead
+    tr
+      th[scope='col'] 
+        = t 'fields.post.title'
+      th[scope='col'] 
+        = t 'fields.post.content'
+      th[scope='col'] 
+        = t 'fields.post.edit_counts'
+      th
+      th
+      th
+
+  tbody
+    - @blog_posts.each do |blog_post|
+      tr
+        td = blog_post.title
+        td = blog_post.content
+        td = blog_post.edit_count
+        td = link_to "#{t 'actions.show'}", blog_post
+        td = link_to "#{t 'actions.edit'}", edit_blog_post_path(blog_post)
+        td = link_to "#{t 'actions.delete'}", blog_post, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to "#{t 'actions.create_new'}", new_blog_post_path

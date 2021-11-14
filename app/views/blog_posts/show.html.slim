@@ -1,0 +1,17 @@
+p#notice = notice
+div[class='mb-3']
+  p[class='h3']
+    strong #{t 'fields.post.title'}: 
+    = @blog_post.title
+
+  p[class='h3']
+    strong #{t 'fields.post.content'}: 
+    = @blog_post.content
+
+  p[class='h3']
+    strong #{t 'fields.post.edit_counts'}: 
+    = @blog_post.edit_count
+
+=> link_to "#{t 'actions.edit'}", edit_blog_post_path(@blog_post)
+'|
+=< link_to "#{t 'actions.back'}", blog_posts_path
