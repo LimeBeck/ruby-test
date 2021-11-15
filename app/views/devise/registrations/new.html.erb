@@ -14,11 +14,6 @@
   </div>
 
   <div class="field">
-    <%= f.label :send_digest_mode, :class=>'form-label' %><br />
-    <%= f.select :send_digest_mode, [["#{t "send_digest_modes.DAILY"}", 'DAILY'], ["#{t "send_digest_modes.WEEKLY"}", 'WEEKLY']] %>
-  </div>
-
-  <div class="field">
     <%= f.label :password, :class=>'form-label' %>
     <% if @minimum_password_length %>
     <em><%= t('devise.shared.minimum_password_length', count: @minimum_password_length) %></em>

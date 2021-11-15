@@ -5,8 +5,10 @@ class BlogPost < ApplicationRecord
 
     after_validation :increase_count, on: [:update]
 
-    before_create do
-        self.edit_count = 0
+    before_validation do
+        if edit_count.nil?
+            self.edit_count = 0
+        end
     end
 
     private

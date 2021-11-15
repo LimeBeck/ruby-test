@@ -1,10 +1,18 @@
 ru:
+  blog_posts:
+    update:
+      notice: "Запись была успешно обновлена"
+    create:
+      notice: "Запись была успешно создана"
+    destroy:
+      notice: "Запись была успешно удалена"
   send_digest_modes:
     WEEKLY: "Еженедельно"
     DAILY: "Ежедневно"
     NONE: "Не рассылать"
   page_titles:
     edit: "Редактировать %{model}"
+    create: "Создать %{model}"
   fields:
     post:
       title: "Заголовок"
