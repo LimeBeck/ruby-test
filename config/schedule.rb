@@ -13,8 +13,9 @@
 #   rake "some:great:rake:task"
 # end
 #
-# every 4.days do
-#   runner "AnotherModel.prune_old_records"
-# end
+
+every 1.day, at: '7:00 am' do
+  runner "SendDailyDigestJob.perform_later"
+end
 
 # Learn more: http://github.com/javan/whenever
