@@ -17,3 +17,10 @@ bundler install
 ```bash
 rails server
 ```
+
+## Запуск a-la production
+
+```
+cd docker/run
+docker-compose up
+```
