@@ -1,4 +1,11 @@
 ru:
+  mailer:
+    weekly:
+      subject: "Еженедельная рассылка новостей"
+      description: "%{username}, вас ждут самые горячие новости за последнюю неделю:"
+    daily:
+      subject: "Ежедневная рассылка новостей"
+      description: "%{username}, вас ждут самые горячие новости за вчера:"
   blog_posts:
     update:
       notice: "Запись была успешно обновлена"

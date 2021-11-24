@@ -83,6 +83,26 @@ Rails.application.configure do
 
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
+  config.i18n.default_locale = :ru
+
+  if ENV['MAIL_ENABLE'].present?
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.raise_delivery_errors = true
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.default_options = {
+      from: ENV['MAIL_FROM']
+    }
+    config.action_mailer.smtp_settings = {
+      address: ENV['MAIL_SMTP_ADDRESS'],
+      port: ENV['MAIL_SMTP_PORT'],
+      domain: ENV['MAIL_SMTP_DOMAIN'],
+      user_name: ENV['MAIL_SMTP_USERNAME'],
+      password: ENV['MAIL_SMTP_PASSWORD'],
+      authentication: 'plain',
+      enable_ssl: ENV['MAIL_ENABLE_SSL'],
+      tls: ENV['MAIL_ENABLE_TLS']
+    }
+  end
 
   # Use a different logger for distributed setups.
   # require "syslog/logger"
